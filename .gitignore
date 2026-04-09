@@ -1,0 +1,6 @@
+# Editor backup files
+*~
+*.bak
+
+# olint linter config
+.cache.olint
