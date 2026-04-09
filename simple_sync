@@ -11,15 +11,14 @@
 #  want to easily change sync direction.
 #  Run this on the "active" side, when you start working on the other end
 #  just fire this up on that node, first it terminates this on the other
-#  end, then it will continously sync content there, until you stop it
+#  end, then it will continuously sync content there, until you stop it
 #  or it gets terminated by the other end starting to source the syncing.
 #
-
 
 #
 #  For simplicity use the same location on both nodes.
 #  Ensure that the owner is the local user given below,
-#  doesnt need to be the same usernames
+#  doesn't need to be the same usernames
 #
 sync_this="/opt/sync_this"
 
@@ -39,7 +38,7 @@ host_a_indicator="/etc/opt/host_a"
 #     port 7216
 #
 
-#  can be hostname or ip# doesnt matter which
+#  can be hostname or ip# doesn't matter which
 host_a="jacpad"
 host_b="hetz1"
 
@@ -47,11 +46,8 @@ host_b="hetz1"
 user_a="jaclu"
 user_b="jaclu"
 
-
 #  How many seconds to sleep between each sync
 sync_sleep=5
-
-
 
 # ==========================================================
 #
@@ -81,7 +77,7 @@ ssh "${dst_user}@$dst_host" killall "$prog_name"
 ex_code="$?"
 if [ "$ex_code" -eq 255 ]; then
     echo
-    echo "Failed to connecto to $dst_host - is it running sshd?"
+    echo "Failed to connect to $dst_host - is it running sshd?"
     echo
     exit 1
 fi
